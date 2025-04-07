@@ -21,8 +21,23 @@ def read_data(file_name, field):
         seq = json.load(json_file)
     return seq
 
-#def linear_search(seq, number):
-    #dictionary =
+def linear_search(seq, number):
+    """
+    :return: (dict): {'position': <list of indices>, 'count': <total count>,}
+    """
+    indicies = []
+    count = 0
+
+    idx = 0
+    while idx < len(seq):
+        if seq[idx] == number:
+            indicies.append(idx)
+            count += 1
+        idx += 1
+
+    return {"positions": indicies,
+            "count": count,
+            }
 
 
 def main():
